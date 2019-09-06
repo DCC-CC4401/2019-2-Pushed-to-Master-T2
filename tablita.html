@@ -458,7 +458,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 </section>
 <!-- Modal -->
-<div class="modal fade" id="actividad" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="actividad" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -613,6 +613,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     clear = document.getElementById('clear'),
     seconds = 0, minutes = 0, hours = 0,
     t;
+    var started = true;
 
     function add() {
     seconds++;
@@ -635,8 +636,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     timer();
 
 
+     // Arreglado el bug del modo turbo, mediante el script de validación
+     // Esto es usando la variable started como aux booleano
     /* Start button */
-    start.onclick = timer;
+    start.onclick = function(){
+        if (started) {
+            timer();
+        }
+        started=false;
+    }
 
     /* Stop button */
     stop.onclick = function() {
