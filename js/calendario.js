@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 'dayGridWeek,dayGridMonth,dayGridDay'
       },
       defaultView: 'dayGridWeek',
+      locale: 'es',
       defaultDate: '2019-08-12',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
