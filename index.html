@@ -1,4 +1,4 @@
-<!--h
+<!--
 Pushed to Master - version 0.0.1
 FCFM - Universidad de Chile
 
@@ -333,27 +333,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="col-md-3 w3agile-notifications">
 			<div class="notifications">
 				<!--notification start-->
-				
-					<header class="panel-heading">
-						Filtros
-					</header>
-					<div class="notify-w3ls">
-						<div class="alert alert-info clearfix">
-							<span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
-							<div class="notification-info">
-								<ul class="clearfix notification-meta">
-									<li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> send you a mail </li>
-									<li class="pull-right notification-time">1 min ago</li>
-								</ul>
-								<p>
-									Urgent meeting for next proposal
-								</p>
-							</div>
-						</div>
-
-
-						
-					</div>
+				                    <header class="panel-heading">
+                        Filtros
+                    </header>
+                    <br>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action active">
+                        Categorías 
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">Estudio
+                        <span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Deportes<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Tiempo Libre<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Dormir<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Tareas del hogar<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Comer<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                    </div>
 				
 				<!--notification end-->
 				</div>
@@ -368,33 +363,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<h4 class="title">Resumen de la semana</h4>
 							</div>
 							<div class="stats-body">
+                                <h5>% Relación Tiempo cumplido / Tiempo estimado</h5><br>
 								<ul class="list-unstyled">
-									<li>GoogleChrome <span class="pull-right">85%</span>  
+									<li>Estudio <span class="pull-right">85%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar green" style="width:85%;"></div> 
 										</div>
 									</li>
-									<li>Firefox <span class="pull-right">35%</span>  
+									<li>Deportes <span class="pull-right">35%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar yellow" style="width:35%;"></div>
 										</div>
 									</li>
-									<li>Internet Explorer <span class="pull-right">78%</span>  
+									<li>Tiempo libre<span class="pull-right">78%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar red" style="width:78%;"></div>
 										</div>
 									</li>
-									<li>Safari <span class="pull-right">50%</span>  
+									<li>Dormir<span class="pull-right">50%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar blue" style="width:50%;"></div>
 										</div>
 									</li>
-									<li>Opera <span class="pull-right">80%</span>  
+									<li>Tareas del hogar<span class="pull-right">80%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar light-blue" style="width:80%;"></div>
 										</div>
 									</li>
-									<li class="last">Others <span class="pull-right">60%</span>  
+									<li class="last">Comer<span class="pull-right">60%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar orange" style="width:60%;"></div>
 										</div>
@@ -411,51 +407,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<table class="table stats-table ">
 								<thead>
 									<tr>
-										<th>S.NO</th>
-										<th>PRODUCT</th>
-										<th>STATUS</th>
-										<th>PROGRESS</th>
+										<th>Mi tiempo por categoría</th>
+										<th>Comparación con amigos</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<th scope="row">1</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-success">In progress</span></td>
+										<th scope="row">Estudio</th>
+
 										<td><h5>85% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">2</th>
-										<td>Aliquam</td>
-										<td><span class="label label-warning">New</span></td>
+										<th scope="row">Deportes</th>
 										<td><h5>35% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">3</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-danger">Overdue</span></td>
+										<th scope="row">Tiempo libre</th>
 										<td><h5 class="down">40% <i class="fa fa-level-down"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">4</th>
-										<td>Aliquam</td>
-										<td><span class="label label-info">Out of stock</span></td>
+										<th scope="row">Dormir</th>
 										<td><h5>100% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">5</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-success">In progress</span></td>
+										<th scope="row">Tareas del hogar</th>
 										<td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">6</th>
-										<td>Aliquam</td>
-										<td><span class="label label-warning">New</span></td>
+										<th scope="row">Comer</th>
 										<td><h5>38% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 								</tbody>
 							</table>
+                            <br>
+                            <h5> <i class="fa fa-level-up"></i>: Porcentaje de tiempo mayor.<br>
+                            <i class="fa fa-level-down"></i>: Porcentaje de tiempo menor.</h5>                            
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -563,7 +549,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <br>
                         <br>
                         <span>Descripción:</span>
-                        <textarea class="form-control" value="Descripción" rows="4" cols="50">
+                        <textarea class="form-control" rows="4" cols="50">
                         </textarea>
                     </div>                                                         
                 </div>
@@ -578,10 +564,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <button type="button" class="btn btn-danger" id="clear">Finalizar</button>
         <button type="button" class="btn btn-warning" id="stop">Pausar</button>
         <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-    </div>
+        </div>
         <div id="princiBoton">
+        <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>    </div>
+        <div id="botonera2" style="display: none">
+        <button type="button" class="btn btn-success" id="agregar" >Agregar</button>
         <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-      </div>
+        </div>
     </div>
   </div>
 </div>
@@ -612,10 +601,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       
     }
     function agregar() {
-      document.getElementById("contenido").style.display = "none";  
+      document.getElementById("contenido").style.display = "none"; 
+      document.getElementById("princiBoton").style.display = "none"; 
       document.getElementById("principal").style.display = "none";  
       document.getElementById("agregar").style.display = "block";  
-      document.getElementById("agregartitulo").style.display = "block";  
+      document.getElementById("agregartitulo").style.display = "block"; 
+      document.getElementById("botonera2").style.display = "block";  
     }
 
     function cerrar() {
@@ -623,7 +614,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       document.getElementById("iniciartitulo").style.display = "none";      
       document.getElementById("agregar").style.display = "none";  
       document.getElementById("agregartitulo").style.display = "none";   
-      document.getElementById("botonera").style.display = "none";  
+      document.getElementById("botonera").style.display = "none"; 
+      document.getElementById("botonera2").style.display = "none";  
       document.getElementById("princiBoton").style.display = "block";    
       document.getElementById("contenido").style.display = "block";  
       document.getElementById("principal").style.display = "block";  

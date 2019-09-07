@@ -1,4 +1,4 @@
-<!--h
+<!--
 Pushed to Master - version 0.0.1
 FCFM - Universidad de Chile
 
@@ -722,7 +722,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <br>
                         <br>
                         <span>Descripción:</span>
-                        <textarea class="form-control" value="Descripción" rows="4" cols="50">
+                        <textarea class="form-control"  rows="4" cols="50">
                         </textarea>
                     </div>                                                         
                 </div>
@@ -733,14 +733,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <div class="modal-footer">
         <div id="botonera" style="display: none">
-        <button type="button" class="btn btn-success" id="comenzar" >Comenzar</button>
-        <button type="button" class="btn btn-danger" id="clear">Finalizar</button>
-        <button type="button" class="btn btn-warning" id="stop">Pausar</button>
-        <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-    </div>
+            <button type="button" class="btn btn-success" id="comenzar" >Comenzar</button>
+            <button type="button" class="btn btn-danger" id="clear">Finalizar</button>
+            <button type="button" class="btn btn-warning" id="stop">Pausar</button>
+            <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
+        </div>
         <div id="princiBoton">
+            <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
+        </div>
+        <div id="botonera2" style="display: none">
+        <button type="button" class="btn btn-success" id="agregar" >Agregar</button>
         <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-      </div>
+        </div>        
     </div>
   </div>
 </div>
@@ -771,10 +775,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       
     }
     function agregar() {
-      document.getElementById("contenido").style.display = "none";  
+      document.getElementById("contenido").style.display = "none"; 
+      document.getElementById("princiBoton").style.display = "none"; 
       document.getElementById("principal").style.display = "none";  
       document.getElementById("agregar").style.display = "block";  
-      document.getElementById("agregartitulo").style.display = "block";  
+      document.getElementById("agregartitulo").style.display = "block"; 
+      document.getElementById("botonera2").style.display = "block";  
     }
 
     function cerrar() {
@@ -782,7 +788,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       document.getElementById("iniciartitulo").style.display = "none";      
       document.getElementById("agregar").style.display = "none";  
       document.getElementById("agregartitulo").style.display = "none";   
-      document.getElementById("botonera").style.display = "none";  
+      document.getElementById("botonera").style.display = "none"; 
+      document.getElementById("botonera2").style.display = "none";  
       document.getElementById("princiBoton").style.display = "block";    
       document.getElementById("contenido").style.display = "block";  
       document.getElementById("principal").style.display = "block";  
