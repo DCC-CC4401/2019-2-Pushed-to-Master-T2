@@ -13,7 +13,7 @@ html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
     overflow-x: hidden;
-    background: url(../images/bg3.jpg) no-repeat 0px 0px;
+    background: url(../images/bg4.jpg) no-repeat 0px 0px;
 	background-size:cover;
 }
 body a{
@@ -225,7 +225,7 @@ margin: 0 auto;
     left:0;
     right:0;
     z-index:1002;
-    background:rgb(82, 120, 171);
+    background:rgb(52, 100, 111);
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
@@ -245,7 +245,7 @@ margin: 0 auto;
     width:100%;
 }
 .brand {
-    background:#415269;
+    background:#1a252f;
     float:left;
     width:240px;
     height:80px;
@@ -267,11 +267,11 @@ a.logo span {
 }
 
 #ex1:hover {
-    color: #6894cd;
+    color: rgb(52, 100, 111);
 }
 
 #imgperfil:hover {
-    color: rgb(104, 148, 205);
+    color: #212d3c;
 }
 
 
@@ -1478,6 +1478,11 @@ section#tables  p {
 }
 .label {
 	font-weight: 300 !important;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+    background-color: #1a252f;
+    border-color: #1a252f;
 }
 .label {
 	padding: 4px 6px;
