@@ -1,4 +1,4 @@
-<!--h
+<!--
 Pushed to Master - version 0.0.1
 FCFM - Universidad de Chile
 
@@ -34,6 +34,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/jquery2.0.3.min.js"></script>
 <script src="js/raphael-min.js"></script>
 <script src="js/morris.js"></script>
+
+<!-- calendario, pero el pulento -->
+<link href='packages/core/main.css' rel='stylesheet' />
+<link href='packages/daygrid/main.css' rel='stylesheet' />
+<script src='packages/core/main.js'></script>
+<script src='packages/interaction/main.js'></script>
+<script src='packages/daygrid/main.js'></script>
+<script src='js/calendario.js'></script>
+
 </head>
 <body>
 <section id="container">
@@ -236,13 +245,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="images/main.png">
+                <img alt="" src="images/loginuser2.png">
                 <span class="username">Usuario</span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="tablita.html"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
@@ -267,12 +276,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </li>
                 
 
-                <li>
+<!--                 <li>
                     <a href="login.html">
                         <i class="fa fa-user"></i>
                         <span>Login Page</span>
                     </a>
-                </li>
+                </li> -->
 
 <!--                 <li class="sub-menu">
                 <a href="javascript:;">
@@ -284,12 +293,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <li><a href="glyphicon.html">glyphicon</a></li>
                 </ul>
                 </li>  -->              
+
+
+                <li>
+                    <a href="tablita.html">
+                        <i class="fa fa-user"></i>
+                        <span>Perfil</span>
+                    </a>
+                </li>   
+
                 <li>
                     <a href="#" data-toggle="modal" data-target="#actividad">
                         <i class="fa fa-calendar-plus-o"></i>
                         <span>Añadir Actividad</span>
                     </a>
-                </li>                                
+                </li>                               
+                         
 
             </ul>            </div>
         <!-- sidebar menu end-->
@@ -307,53 +326,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- calendar -->
 		<div class="col-md-9 agile-calendar">
 			<div class="calendar-widget">
-                <div class="panel-heading ui-sortable-handle">
-					<span class="panel-icon">
-                      <i class="fa fa-calendar-o"></i>
-                    </span>
-                    <span class="panel-title"> Calendar Widget</span>
-                </div>
-				<!-- grids -->
-					<div class="agile-calendar-grid">
-						<div class="page">
-							
-							<div class="w3l-calendar-left">
-								<div class="calendar-heading">
-									
-								</div>
-								<div class="monthly" id="mycalendar"></div>
-							</div>
-							
-							<div class="clearfix"> </div>
-						</div>
-					</div>
+                 <div id='calendar'></div>
 			</div>
 		</div>
 		<!-- //calendar -->
 		<div class="col-md-3 w3agile-notifications">
 			<div class="notifications">
 				<!--notification start-->
-				
-					<header class="panel-heading">
-						Filtros
-					</header>
-					<div class="notify-w3ls">
-						<div class="alert alert-info clearfix">
-							<span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
-							<div class="notification-info">
-								<ul class="clearfix notification-meta">
-									<li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> send you a mail </li>
-									<li class="pull-right notification-time">1 min ago</li>
-								</ul>
-								<p>
-									Urgent meeting for next proposal
-								</p>
-							</div>
-						</div>
-
-
-						
-					</div>
+				                    <header class="panel-heading">
+                        Filtros
+                    </header>
+                    <br>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action active">
+                        Categorías 
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">Estudio
+                        <span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Deportes<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Tiempo Libre<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Dormir<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Tareas del hogar<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                      <a href="#" class="list-group-item list-group-item-action">Comer<span class="badge"><i class="fa fa-check-square-o"></i></span></a>
+                    </div>
 				
 				<!--notification end-->
 				</div>
@@ -368,33 +363,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<h4 class="title">Resumen de la semana</h4>
 							</div>
 							<div class="stats-body">
+                                <h5>% Relación Tiempo cumplido / Tiempo estimado</h5><br>
 								<ul class="list-unstyled">
-									<li>GoogleChrome <span class="pull-right">85%</span>  
+									<li>Estudio <span class="pull-right">85%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar green" style="width:85%;"></div> 
 										</div>
 									</li>
-									<li>Firefox <span class="pull-right">35%</span>  
+									<li>Deportes <span class="pull-right">35%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar yellow" style="width:35%;"></div>
 										</div>
 									</li>
-									<li>Internet Explorer <span class="pull-right">78%</span>  
+									<li>Tiempo libre<span class="pull-right">78%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar red" style="width:78%;"></div>
 										</div>
 									</li>
-									<li>Safari <span class="pull-right">50%</span>  
+									<li>Dormir<span class="pull-right">50%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar blue" style="width:50%;"></div>
 										</div>
 									</li>
-									<li>Opera <span class="pull-right">80%</span>  
+									<li>Tareas del hogar<span class="pull-right">80%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar light-blue" style="width:80%;"></div>
 										</div>
 									</li>
-									<li class="last">Others <span class="pull-right">60%</span>  
+									<li class="last">Comer<span class="pull-right">60%</span>  
 										<div class="progress progress-striped active progress-right">
 											<div class="bar orange" style="width:60%;"></div>
 										</div>
@@ -411,56 +407,52 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<table class="table stats-table ">
 								<thead>
 									<tr>
-										<th>S.NO</th>
-										<th>PRODUCT</th>
-										<th>STATUS</th>
-										<th>PROGRESS</th>
+										<th>Mi tiempo por categoría</th>
+										<th>Comparación con amigos</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<th scope="row">1</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-success">In progress</span></td>
+										<th scope="row">Estudio</th>
+
 										<td><h5>85% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">2</th>
-										<td>Aliquam</td>
-										<td><span class="label label-warning">New</span></td>
+										<th scope="row">Deportes</th>
 										<td><h5>35% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">3</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-danger">Overdue</span></td>
+										<th scope="row">Tiempo libre</th>
 										<td><h5 class="down">40% <i class="fa fa-level-down"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">4</th>
-										<td>Aliquam</td>
-										<td><span class="label label-info">Out of stock</span></td>
+										<th scope="row">Dormir</th>
 										<td><h5>100% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">5</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-success">In progress</span></td>
+										<th scope="row">Tareas del hogar</th>
 										<td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
 									</tr>
 									<tr>
-										<th scope="row">6</th>
-										<td>Aliquam</td>
-										<td><span class="label label-warning">New</span></td>
+										<th scope="row">Comer</th>
 										<td><h5>38% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 								</tbody>
 							</table>
+                            <br>
+                            <h5> <i class="fa fa-level-up"></i>: Porcentaje de tiempo mayor.<br>
+                            <i class="fa fa-level-down"></i>: Porcentaje de tiempo menor.</h5>                            
 						</div>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 </section>
+
+<!-- reloj esquinero -->
+<span id="corner" class="corner text-center" data-toggle="modal" data-target="#actividad">
+<i onclick="iniciar()" class="fa fa-clock-o fa-5x"></i> 
+<h1 id="reloj"><time>00:00:00</time></h1>    
+</span>
  <!-- footer -->
 		  <div class="footer">
 			<div class="wthree-copyright">
@@ -470,8 +462,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!-- / footer -->
 
 </section>
+
+
+
 <!-- Modal -->
-<div class="modal fade" id="actividad" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="actividad" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -536,7 +531,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         min="09:00" max="18:00" required>
                     </div>  
 
-                    <div class="col-md-12 tex-center">
+                    <div class="col-md-12 text-left">
                                             <br>
                     <br>
                         <select class="form-control" >
@@ -547,11 +542,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </select>   
                         <br>
                         <br>
-                        <input class="form-control" type="text" value="Nombre"name="fname">
+                        <div class="input-group">
+                                <span class="input-group-addon btn-white"><i class="fa fa-user"></i></span>
+                                <input class="form-control" type="text" value="Nombre"name="fname">
+                        </div>
                         <br>
                         <br>
                         <span>Descripción:</span>
-                        <textarea class="form-control" value="Descripción" rows="4" cols="50">
+                        <textarea class="form-control" rows="4" cols="50">
                         </textarea>
                     </div>                                                         
                 </div>
@@ -566,10 +564,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <button type="button" class="btn btn-danger" id="clear">Finalizar</button>
         <button type="button" class="btn btn-warning" id="stop">Pausar</button>
         <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-    </div>
+        </div>
         <div id="princiBoton">
+        <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>    </div>
+        <div id="botonera2" style="display: none">
+        <button type="button" class="btn btn-success" id="agregar" >Agregar</button>
         <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-      </div>
+        </div>
     </div>
   </div>
 </div>
@@ -600,10 +601,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       
     }
     function agregar() {
-      document.getElementById("contenido").style.display = "none";  
+      document.getElementById("contenido").style.display = "none"; 
+      document.getElementById("princiBoton").style.display = "none"; 
       document.getElementById("principal").style.display = "none";  
       document.getElementById("agregar").style.display = "block";  
-      document.getElementById("agregartitulo").style.display = "block";  
+      document.getElementById("agregartitulo").style.display = "block"; 
+      document.getElementById("botonera2").style.display = "block";  
     }
 
     function cerrar() {
@@ -611,7 +614,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       document.getElementById("iniciartitulo").style.display = "none";      
       document.getElementById("agregar").style.display = "none";  
       document.getElementById("agregartitulo").style.display = "none";   
-      document.getElementById("botonera").style.display = "none";  
+      document.getElementById("botonera").style.display = "none"; 
+      document.getElementById("botonera2").style.display = "none";  
       document.getElementById("princiBoton").style.display = "block";    
       document.getElementById("contenido").style.display = "block";  
       document.getElementById("principal").style.display = "block";  
@@ -621,12 +625,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- cronometro -->
 <script>
     var h1 = document.getElementsByTagName('h1')[0],
+    h2 = document.getElementsByTagName('h1')[1],
     start = document.getElementById('comenzar'),
     stop = document.getElementById('stop'),
     clear = document.getElementById('clear'),
     seconds = 0, minutes = 0, hours = 0,
     t;
+    var started = true;
 
+    function mostrar(){
+        document.getElementById('corner').style.display = "block";
+    }
+
+    function ocultar(){
+        document.getElementById('corner').style.display = "none";
+    }    
+
+    // agrego el timer
     function add() {
     seconds++;
     if (seconds >= 60) {
@@ -640,26 +655,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     
     h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
 
+    h2.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);    
     timer();
     }
+
     function timer() {
         t = setTimeout(add, 1000);
     }
-    timer();
 
 
+     // Arreglado el bug del modo turbo, mediante el script de validación
+     // Esto es usando la variable started como aux booleano
     /* Start button */
-    start.onclick = timer;
+    start.onclick = function(){
+        if (started) {
+            timer();
+            mostrar();
+        }
+        started=false;
+    }
 
     /* Stop button */
     stop.onclick = function() {
         clearTimeout(t);
+        started = true;
     }
 
     /* Clear button */
     clear.onclick = function() {
         h1.textContent = "00:00:00";
+        h2.textContent = "00:00:00";
         seconds = 0; minutes = 0; hours = 0;
+        clearTimeout(t);
+        started = true;
+        ocultar();
     }
 </script>
 

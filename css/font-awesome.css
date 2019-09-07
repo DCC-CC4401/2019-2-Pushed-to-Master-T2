@@ -37,9 +37,16 @@
 .fa-5x {
   font-size: 5em;
 }
+.fa-7x {
+  font-size: 7em;
+}
+
 
 .fa-10x {
   font-size: 10em;
+}
+.fa-12x {
+  font-size: 12em;
 }
 .fa-fw {
   width: 1.28571429em;

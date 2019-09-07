@@ -13,7 +13,7 @@ html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
     overflow-x: hidden;
-    background: url(../images/bg3.jpg) no-repeat 0px 0px;
+    background: url(../images/bg4.jpg) no-repeat 0px 0px;
 	background-size:cover;
 }
 body a{
@@ -27,6 +27,16 @@ body a{
 h1,h2,h3,h4,h5,h6{
 	margin:0;			   
 }
+
+.corner {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 40px;
+    color: #1a252f;
+}
+
 p{
 	margin:0;
 }
@@ -201,8 +211,14 @@ ul.sidebar-menu li a.active i {
     -o-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
+
+#calendar {
+max-width: 900px;
+margin: 0 auto;
+}
+
 .footer {
-    background: #415269;
+    background: rgb(52, 100, 111);
     padding: 20px;
 }
 .footer p {
@@ -219,7 +235,7 @@ ul.sidebar-menu li a.active i {
     left:0;
     right:0;
     z-index:1002;
-    background:rgb(82, 120, 171);
+    background:rgb(52, 100, 111);
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
@@ -239,7 +255,7 @@ ul.sidebar-menu li a.active i {
     width:100%;
 }
 .brand {
-    background:#415269;
+    background:#1a252f;
     float:left;
     width:240px;
     height:80px;
@@ -261,8 +277,13 @@ a.logo span {
 }
 
 #ex1:hover {
-    color: #6894cd;
+    color: rgb(52, 100, 111);
 }
+
+#imgperfil:hover {
+    color: #212d3c;
+}
+
 
 /*notification*/
 #top_menu .nav>li,ul.top-menu>li {
@@ -493,7 +514,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     border-radius:5px;
 }
 .dropdown-menu.extended.logout>li>a:hover i {
-    color:#ffa2a2;
+    color:#9fbbe1;
 }
 .dropdown-menu.extended.logout>li>a i {
     font-size:17px;
@@ -1468,6 +1489,11 @@ section#tables  p {
 .label {
 	font-weight: 300 !important;
 }
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+    background-color: #1a252f;
+    border-color: #1a252f;
+}
 .label {
 	padding: 4px 6px;
 	border: none;
@@ -1608,12 +1634,18 @@ ul.bs-glyphicons-list {
 }
 .w3ls_head {
     font-size: 30px;
-    color: #000000;
-    margin-bottom: 2em;
+    color: #FFFFFF;
+    margin-bottom: 0.8em;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
 }
+
+.gi-2x{font-size: 2em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
+.white {color:white;}
 .agile-grid{
 	background: #eef9f0;
     padding: 2em;
@@ -2355,7 +2387,7 @@ ul.inbox-pagination li {
 /*-- //gallery --*/
 .gallery {
     padding: 2em;
-    background: rgb(238, 249, 240);
+    background: rgba(54, 66, 81, 0.75);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 /*-- gallery --*/
@@ -3148,4 +3180,6 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
 .chart_agile_bottom {
     padding: 0;
 }
+
+
 }
