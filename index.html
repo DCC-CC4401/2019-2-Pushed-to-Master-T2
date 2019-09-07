@@ -34,6 +34,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/jquery2.0.3.min.js"></script>
 <script src="js/raphael-min.js"></script>
 <script src="js/morris.js"></script>
+
+<!-- calendario, pero el pulento -->
+<link href='packages/core/main.css' rel='stylesheet' />
+<link href='packages/daygrid/main.css' rel='stylesheet' />
+<script src='packages/core/main.js'></script>
+<script src='packages/interaction/main.js'></script>
+<script src='packages/daygrid/main.js'></script>
+<script src='js/calendario.js'></script>
+
 </head>
 <body>
 <section id="container">
@@ -242,7 +251,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="tablita.html"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
@@ -315,26 +324,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- calendar -->
 		<div class="col-md-9 agile-calendar">
 			<div class="calendar-widget">
-                <div class="panel-heading ui-sortable-handle">
-					<span class="panel-icon">
-                      <i class="fa fa-calendar-o"></i>
-                    </span>
-                    <span class="panel-title"> Calendar Widget</span>
-                </div>
-				<!-- grids -->
-					<div class="agile-calendar-grid">
-						<div class="page">
-							
-							<div class="w3l-calendar-left">
-								<div class="calendar-heading">
-									
-								</div>
-								<div class="monthly" id="mycalendar"></div>
-							</div>
-							
-							<div class="clearfix"> </div>
-						</div>
-					</div>
+                 <div id='calendar'></div>
 			</div>
 		</div>
 		<!-- //calendar -->
@@ -544,7 +534,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         min="09:00" max="18:00" required>
                     </div>  
 
-                    <div class="col-md-12 tex-center">
+                    <div class="col-md-12 text-left">
                                             <br>
                     <br>
                         <select class="form-control" >
@@ -555,7 +545,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </select>   
                         <br>
                         <br>
-                        <input class="form-control" type="text" value="Nombre"name="fname">
+                        <div class="input-group">
+                                <span class="input-group-addon btn-white"><i class="fa fa-user"></i></span>
+                                <input class="form-control" type="text" value="Nombre"name="fname">
+                        </div>
                         <br>
                         <br>
                         <span>Descripción:</span>
@@ -677,6 +670,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     clear.onclick = function() {
         h1.textContent = "00:00:00";
         seconds = 0; minutes = 0; hours = 0;
+        clearTimeout(t);
+        started = true;
     }
 </script>
 
