@@ -27,6 +27,16 @@ body a{
 h1,h2,h3,h4,h5,h6{
 	margin:0;			   
 }
+
+.corner {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 40px;
+    color: #1a252f;
+}
+
 p{
 	margin:0;
 }
@@ -208,7 +218,7 @@ margin: 0 auto;
 }
 
 .footer {
-    background: #415269;
+    background: rgb(52, 100, 111);
     padding: 20px;
 }
 .footer p {
@@ -3170,4 +3180,6 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
 .chart_agile_bottom {
     padding: 0;
 }
+
+
 }
