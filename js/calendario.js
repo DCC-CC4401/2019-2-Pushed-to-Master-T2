@@ -1,5 +1,4 @@
-
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -7,8 +6,9 @@
       header: {
         left: 'prevYear,prev,next,nextYear today',
         center: 'title',
-        right: 'dayGridMonth,dayGridWeek,dayGridDay'
+        right: 'dayGridWeek,dayGridMonth,dayGridDay'
       },
+      defaultView: 'dayGridWeek',
       defaultDate: '2019-08-12',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
