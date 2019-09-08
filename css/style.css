@@ -61,6 +61,9 @@ body a:hover{
 #sidebar ul li {
     position: relative;
 }
+.rounded-circle {
+    border-radius: 50% !important;
+}
 .leftside-navigation,.right-stat-bar{
     height: 100%;
 }
