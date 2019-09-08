@@ -523,9 +523,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           </div>
         </div>
     </section>
-
-
-   
+<!-- reloj esquinero -->
+<span id="corner" class="corner text-center" data-toggle="modal" data-target="#actividad">
+<i onclick="iniciar()" class="fa fa-clock-o fa-5x"></i> 
+<h1 id="reloj"><time>00:00:00</time></h1>    
+</span>
  <!-- footer -->
           <div class="footer">
             <div class="wthree-copyright">
@@ -692,15 +694,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     }
 </script>
 
+
 <!-- cronometro -->
 <script>
     var h1 = document.getElementsByTagName('h1')[0],
+    h2 = document.getElementsByTagName('h1')[1],
     start = document.getElementById('comenzar'),
     stop = document.getElementById('stop'),
     clear = document.getElementById('clear'),
     seconds = 0, minutes = 0, hours = 0,
     t;
     var started = true;
+
+    function mostrar(){
+        document.getElementById('corner').style.display = "block";
+    }
+
+    function ocultar(){
+        document.getElementById('corner').style.display = "none";
+    }    
 
     // agrego el timer
     function add() {
@@ -715,6 +727,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     }
     
     h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    h2.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);    
     timer();
     }
 
@@ -729,6 +743,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     start.onclick = function(){
         if (started) {
             timer();
+            mostrar();
         }
         started=false;
     }
@@ -742,11 +757,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     /* Clear button */
     clear.onclick = function() {
         h1.textContent = "00:00:00";
+        h2.textContent = "00:00:00";
         seconds = 0; minutes = 0; hours = 0;
         clearTimeout(t);
         started = true;
+        ocultar();
     }
 </script>
+
 
 
 <script>
