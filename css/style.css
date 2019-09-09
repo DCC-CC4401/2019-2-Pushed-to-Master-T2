@@ -52,6 +52,28 @@ h1,h2,h3,h4,h5,h6{
 }
 }
 
+.list-group-item-secondary {
+    background-color: #ffb7089e;
+}
+
+.list-group-item-primary {
+    background-color: #031dff66;
+}
+
+.list-group-item-danger {
+    background-color: #ebc5c5;
+}
+.list-group-item-warning {
+    background-color: #fffb0070;
+}
+
+.list-group-item-success {
+    background-color: #9fefae;
+}
+.list-group-item-dark {
+    background-color: #adf7f1;
+}
+
 
 .corner {
     display: none;

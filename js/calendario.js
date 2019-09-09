@@ -32,42 +32,51 @@ document.addEventListener('DOMContentLoaded', function() {
           groupId: 999,
           title: 'Bailes de Fornai',
           start: '2019-08-16T12:00:00',
-          end: '2019-08-16T13:30:00'
+          end: '2019-08-16T13:30:00',
+          color: '#9fefae'
         },
         {
-          title: 'Meeting',
+          title: 'Limpiar habitación',
           start: '2019-08-12T10:30:00',
-          end: '2019-08-12T13:30:00'
+          end: '2019-08-12T13:30:00',
+          color: '#ebc5c5'
         },
         {
           title: 'Control de la vida',
           start: '2019-08-15T08:30:00',
-          end: '2019-08-15T13:30:00'
+          end: '2019-08-15T13:30:00',
+          color: '#ffb7089e'
         },        
         {
           title: 'Control de ISW',
           start: '2019-08-14T14:30:00',
-          end: '2019-08-14T16:30:00'
+          end: '2019-08-14T16:30:00',
+          color: '#ffb7089e'
         },        
         {
           title: 'Almuerzo',
-          start: '2019-08-12T12:00:00'
+          start: '2019-08-12T12:00:00',
+          color: '#adf7f1'
         },
         {
-          title: 'Meeting',
-          start: '2019-08-12T14:30:00'
+          title: 'Siesta',
+          start: '2019-08-12T14:30:00',
+          color: '#F9FF5E'
         },
         {
           title: 'Fornai',
-          start: '2019-08-12T17:30:00'
+          start: '2019-08-12T17:30:00',
+          color: '#031dff66'
         },
         {
           title: 'Cena',
-          start: '2019-08-12T20:00:00'
+          start: '2019-08-12T20:00:00',
+          color: '#adf7f1'
         },
         {
           title: 'Matar creeper',
-          start: '2019-08-13T13:00:00'
+          start: '2019-08-13T13:00:00',
+          color: '#031dff66'
         },
         {
           title: 'Click for Google',
