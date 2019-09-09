@@ -2,23 +2,22 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid' ],
+      plugins: [ 'dayGrid', 'timeGrid', 'list', 'interaction' ],
       header: {
-        left: 'prevYear,prev,next,nextYear today',
+        left: 'prev,next today',
         center: 'title',
-        right: 'dayGridWeek,dayGridMonth,dayGridDay'
-      },
-      defaultView: 'dayGridWeek',
+        right: 'timeGridWeek,timeGridDay,listWeek'
+      },   
+      defaultView: 'timeGridWeek',
       locale: 'es',
+      nowIndicator: true,
+      allDaySlot: false,
+      minTime: "07:00:00",
       defaultDate: '2019-08-12',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
       events: [
-        {
-          title: 'All Day Event',
-          start: '2019-08-01'
-        },
         {
           title: 'Long Event',
           start: '2019-08-07',
@@ -26,26 +25,32 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           groupId: 999,
-          title: 'Repeating Event',
-          start: '2019-08-09T16:00:00'
+          title: 'Bailes de Fornai',
+          start: '2019-08-09T12:00:00'
         },
         {
           groupId: 999,
-          title: 'Repeating Event',
-          start: '2019-08-16T16:00:00'
-        },
-        {
-          title: 'Conference',
-          start: '2019-08-11',
-          end: '2019-08-13'
+          title: 'Bailes de Fornai',
+          start: '2019-08-16T12:00:00',
+          end: '2019-08-16T13:30:00'
         },
         {
           title: 'Meeting',
           start: '2019-08-12T10:30:00',
-          end: '2019-08-12T12:30:00'
+          end: '2019-08-12T13:30:00'
         },
         {
-          title: 'Lunch',
+          title: 'Control de la vida',
+          start: '2019-08-15T08:30:00',
+          end: '2019-08-15T13:30:00'
+        },        
+        {
+          title: 'Control de ISW',
+          start: '2019-08-14T14:30:00',
+          end: '2019-08-14T16:30:00'
+        },        
+        {
+          title: 'Almuerzo',
           start: '2019-08-12T12:00:00'
         },
         {
@@ -53,16 +58,16 @@ document.addEventListener('DOMContentLoaded', function() {
           start: '2019-08-12T14:30:00'
         },
         {
-          title: 'Happy Hour',
+          title: 'Fornai',
           start: '2019-08-12T17:30:00'
         },
         {
-          title: 'Dinner',
+          title: 'Cena',
           start: '2019-08-12T20:00:00'
         },
         {
-          title: 'Birthday Party',
-          start: '2019-08-13T07:00:00'
+          title: 'Matar creeper',
+          start: '2019-08-13T13:00:00'
         },
         {
           title: 'Click for Google',
