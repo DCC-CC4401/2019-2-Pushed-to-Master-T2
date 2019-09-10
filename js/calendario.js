@@ -1,3 +1,5 @@
+// Author: Pushed To Master
+
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
@@ -10,13 +12,41 @@ document.addEventListener('DOMContentLoaded', function() {
       },   
       defaultView: 'timeGridWeek',
       locale: 'es',
+      // Al clickear un evento muestro la ficha correspondiente
+      eventClick:  function(event, jsEvent, view) {
+          $('#modalTitle').html(event.title);
+          $('#modalBody').html(event.description);
+          $('#eventUrl').attr('href',event.url);
+          $('#calendarModal').modal();
+      },     
+      // Ejecuto el modal-menu para agregar una actividad
+      dateClick: function(date, jsEvent, view) {
+          $("#actividad").modal("show");
+          },
+
+      selectable: true,    
+      // Multiples selecciones    
+      // select: function (start, end, jsEvent, view) {
+      //     $("#calendar").fullCalendar('addEventSource', [{
+      //         start: start,
+      //         end: end,
+      //         rendering: 'background',
+      //         block: true,
+      //     }, ]);
+      //     $("#calendar").fullCalendar("unselect");   
+      // },
+      //Admito solapamiento de selecciones
+      selectOverlap: function(event) {
+      return ! event.block;
+      },
+
       nowIndicator: true,
       allDaySlot: false,
       minTime: "07:00:00",
       defaultDate: '2019-08-12',
-      navLinks: true, // can click day/week names to navigate views
+      navLinks: true, // puedo clickear semana / mes / dia
       editable: true,
-      eventLimit: true, // allow "more" link when too many events
+      eventLimit: true, // permitos mas links cuando hay demasiados eventos
       events: [
         {
           title: 'Long Event',
@@ -55,13 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },        
         {
           title: 'Almuerzo',
-          start: '2019-08-12T12:00:00',
+          start: '2019-08-12T08:00:00',
           color: '#adf7f1'
         },
         {
           title: 'Siesta',
           start: '2019-08-12T14:30:00',
-          color: '#F9FF5E'
+          color: '#fffb0070'
         },
         {
           title: 'Fornai',
@@ -76,10 +106,11 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           title: 'Matar creeper',
           start: '2019-08-13T13:00:00',
-          color: '#031dff66'
+          color: '#031dff66',
+          url: '#actividad'
         },
         {
-          title: 'Click for Google',
+          title: 'Click for Google uwu',
           url: 'http://google.com/',
           start: '2019-08-28'
         }
@@ -88,3 +119,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     calendar.render();
   });
+

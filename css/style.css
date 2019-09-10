@@ -1,8 +1,5 @@
 /*
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
+// Author: Pushed To Master
 */
 h4, h5, h6,
 h1, h2, h3 {margin: 0;}
@@ -65,6 +62,10 @@ h1,h2,h3,h4,h5,h6{
 }
 .list-group-item-warning {
     background-color: #fffb0070;
+}
+
+#textarea::placeholder {
+  color: #0bf;  
 }
 
 .list-group-item-success {
@@ -2549,7 +2550,7 @@ h4 input[type="checkbox"] {
 }
  /*--placeholder-color--*/
 ::-webkit-input-placeholder {
-	color:#fff !important;
+	color:#515151 !important;
 }
 :-moz-placeholder { /* Firefox 18- */
 	color:#fff !important; 

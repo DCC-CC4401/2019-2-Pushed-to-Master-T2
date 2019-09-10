@@ -1,5 +1,5 @@
 <!--
-Pushed to Master - version 0.0.1
+Pushed to Master - version 1.0.2
 FCFM - Universidad de Chile
 
 Original version by W3layouts
@@ -486,132 +486,215 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!-- Modal -->
 <div class="modal fade" id="actividad" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="principal" class="modal-title">Seleccione una acción</h3>
-        <h3 id="iniciartitulo" style="display: none" class="modal-title">Inicia una actividad</h3>
-        <h3 id="agregartitulo" style="display: none" class="modal-title">Agregar una actividad</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-<div class="modal-body">
-    <div id="contenido" class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 text-center">  
-                <div  class="center-block">
-                    <i id="ex1"  onclick="iniciar()" class="fa fa-clock-o fa-10x"></i>
-                    <br>    
-                    <span>Iniciar Actividad</span>
-                </div>
-            </div>
-            <div class="col-md-6 ml-auto text-center">
-          <i id="ex1" onclick="agregar()" class="fa fa-plus-circle fa-10x"></i>
-          <br>
-           <span> Agregar Actividad</span>
-            </div>
-        </div>
-    </div>
-
-    <div id="iniciar" style="display: none" class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">  
-                <div  class="center-block">
-                    <div class="col-md-6">
-                        <select class="form-control" required>
-                          <option value="volvo">Categoria</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
-                        </select> 
-                    </div>
-                    <div class="col-md-6">
-                        <select class="form-control">
-                          <option value="volvo">Actividad</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
-                        </select> 
-                    </div>                    
-                    <br>
-                    <br>
-                    <i id="ex1"  onclick="iniciar()" class="fa fa-clock-o fa-4x"></i>
-                    <h1><time>00:00:00</time></h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-      <div id="agregar" style="display: none" class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">  
-                <div class="center-block">
-                    <div class="col-md-12 text-left">
-
-                    <i id="ex1" onclick="agregar()" class="fa fa-calendar "></i>  
-                    <span>Fecha de inicio:</span>  
-                    <input class="form-control"  type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-                    <br>
-                    <br>
-                </div>
-                    <div class="col-md-6 text-left">
-                        <i id="ex1" class="fa fa-clock-o "></i>
-                        <span>Hora de inicio:</span>
-                        <input class="form-control" type="time" id="appt" name="appt"
-                        min="09:00" max="18:00" required>
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <i id="ex1" class="fa fa-hourglass-end"></i>
-                        <span>Duración:</span>
-                        <input class="form-control" type="time" id="appt" name="appt"
-                        min="09:00" max="18:00" required>
-                    </div>  
-
-                    <div class="col-md-12 text-left">
-                                            <br>
-                    <br>
-                        <select class="form-control" >
-                          <option value="volvo">Categoria</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
-                        </select>   
-                        <br>
-                        <br>
-                        <div class="input-group">
-                                <span class="input-group-addon btn-white"><i class="fa fa-user"></i></span>
-                                <input class="form-control" type="text" value="Nombre"name="fname">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="principal" class="modal-title">Seleccione una acción</h3>
+            <h3 id="iniciartitulo" style="display: none" class="modal-title">Inicia una actividad</h3>
+            <h3 id="agregartitulo" style="display: none" class="modal-title">Agregar una actividad</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            <div class="modal-body">
+                <div id="contenido" class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 text-center">  
+                            <div  class="center-block">
+                                <i id="ex1"  onclick="iniciar()" class="fa fa-clock-o fa-10x"></i>
+                                <br>    
+                                <span>Iniciar Actividad</span>
+                            </div>
                         </div>
-                        <br>
-                        <br>
-                        <span>Descripción:</span>
-                        <textarea class="form-control" rows="4" cols="50"></textarea>
-                    </div>                                                         
+                        <div class="col-md-6 ml-auto text-center">
+                      <i id="ex1" onclick="agregar()" class="fa fa-plus-circle fa-10x"></i>
+                      <br>
+                       <span> Agregar Actividad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="iniciar" style="display: none" class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 text-center">  
+                            <div  class="center-block">
+                                <div class="col-md-6">
+                                    <select class="form-control" required>
+                                      <option value="volvo">Categoría</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select> 
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control">
+                                      <option value="volvo">Actividad</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select> 
+                                </div>                    
+                                <br>
+                                <br>
+                                <i id="ex1"  onclick="iniciar()" class="fa fa-clock-o fa-4x"></i>
+                                <h1><time>00:00:00</time></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="agregar" style="display: none" class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 text-center">  
+                            <div class="center-block">
+                                <div class="col-md-12 text-left">
+
+                                <i id="ex1" onclick="agregar()" class="fa fa-calendar "></i>  
+                                <span>Fecha de inicio:</span>  
+                                <input class="form-control"  type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                                <br>
+                                <br>
+                            </div>
+                                <div class="col-md-6 text-left">
+                                    <i id="ex1" class="fa fa-clock-o "></i>
+                                    <span>Hora de inicio:</span>
+                                    <input class="form-control" type="time" id="appt" name="appt"
+                                    min="09:00" max="18:00" required>
+                                </div>
+                                <div class="col-md-6 text-left">
+                                    <i id="ex1" class="fa fa-hourglass-end"></i>
+                                    <span>Duración:</span>
+                                    <input class="form-control" type="time" id="appt" name="appt"
+                                    min="09:00" max="18:00" required>
+                                </div>  
+
+                                <div class="col-md-12 text-left">
+                                                        <br>
+                                <br>
+                                    <select class="form-control" >
+                                      <option value="volvo">Actividad</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select>   
+                                    <br>
+                                    <br>
+                                    <select class="form-control" >
+                                      <option value="volvo">Categoría</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select>   
+                                    <br>
+                                    <br>                                    
+                                    <div class="input-group">
+                                            <span class="input-group-addon btn-white"><i class="fa fa-user"></i></span>
+                                            <input class="form-control" type="text" value="Nombre"name="fname">
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <span>Descripción:</span>
+                                    <textarea class="form-control" rows="4" cols="50"></textarea>
+                                </div>                                                         
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="modal-footer">
+                <div id="botonera" style="display: none">
+                <button type="button" class="btn btn-success" id="comenzar" >Comenzar</button>
+                <button type="button" class="btn btn-danger" id="clear">Finalizar</button>
+                <button type="button" class="btn btn-warning" id="stop">Pausar</button>
+                <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
+                </div>
+                <div id="princiBoton">
+                <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>    </div>
+                <div id="botonera2" style="display: none">
+                <button type="button" class="btn btn-success" id="agregar" >Agregar</button>
+                <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
                 </div>
             </div>
         </div>
-    </div>  
-  </div>
-
-    <div class="modal-footer">
-        <div id="botonera" style="display: none">
-        <button type="button" class="btn btn-success" id="comenzar" >Comenzar</button>
-        <button type="button" class="btn btn-danger" id="clear">Finalizar</button>
-        <button type="button" class="btn btn-warning" id="stop">Pausar</button>
-        <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-        </div>
-        <div id="princiBoton">
-        <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>    </div>
-        <div id="botonera2" style="display: none">
-        <button type="button" class="btn btn-success" id="agregar" >Agregar</button>
-        <button type="button" class="btn btn-primary" onclick="cerrar()" data-dismiss="modal">Cancelar</button>
-        </div>
     </div>
-  </div>
 </div>
 <!-- modal menu end -->
+<!-- Modal -->
+<div id="calendarModal" class="modal fade">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Resumen de Actividad</h3>
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+            <h4 id="modalTitle" class="modal-title"></h4>
+        </div>
+        <div id="modalBody" class="modal-body">
+        <div id="agregar" class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 text-center">  
+                            <div class="center-block">
+                                <div class="col-md-12 text-left">
 
+                                <i id="ex1" onclick="agregar()" class="fa fa-calendar "></i>  
+                                <span>Fecha de inicio:</span>  
+                                <input class="form-control"  type="date" id="start" name="trip-start" min="2018-01-01" value="2019-09-16" max="2020-12-31" disabled="disabled">
+                                <br>
+                                <br>
+                            </div>
+                                <div class="col-md-6 text-left">
+                                    <i id="ex1" class="fa fa-clock-o "></i>
+                                    <span>Hora de inicio:</span>
+                                    <input class="form-control" type="time" id="appt" name="appt" value="12:00" 
+                                    min="09:00" max="18:00" required disabled="disabled">
+                                </div>
+                                <div class="col-md-6 text-left">
+                                    <i id="ex1" class="fa fa-hourglass-end"></i>
+                                    <span>Duración:</span>
+                                    <input class="form-control" type="time" id="appt" value="01:30" name="appt"
+                                    min="09:00" max="18:00" required disabled="disabled">
+                                </div>  
+
+                                <div class="col-md-12 text-left">
+                                                        <br>
+                                <br>
+                                    <select class="form-control" disabled="disabled">
+                                      <option value="volvo">Sin Actividad</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select>   
+                                    <br>
+                                    <br>
+                                    <select class="form-control" disabled="disabled">
+                                      <option value="volvo">Tiempo Libre</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select>   
+                                    <br>
+                                    <br>                                    
+                                    <div class="input-group">
+                                            <span class="input-group-addon btn-white"><i class="fa fa-user"></i></span>
+                                            <input class="form-control" type="text" value="Bailes de Fornai"name="fname" disabled="disabled">
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <span>Descripción:</span>
+                                    <textarea name="textarea" class="form-control" placeholder="Aprende el Electro Suffle" rows="4" cols="50" disabled="disabled"></textarea>
+                                </div>                                                         
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+         </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="comenzar" >Modificar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
 <!--main content end-->
 </section>
 <script src="js/bootstrap.js"></script>
