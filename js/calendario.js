@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'timeGridWeek,timeGridDay,listWeek'
+        right: 'timeGridWeek,dayGridMonth,timeGridDay,listWeek'
       },   
       defaultView: 'timeGridWeek',
       locale: 'es',
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // select: function (start, end, jsEvent, view) {
       //     $("#calendar").fullCalendar('addEventSource', [{
       //         start: start,
-      //         end: end,
+      //         end: end,  
       //         rendering: 'background',
       //         block: true,
       //     }, ]);
